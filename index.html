@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glad Tidings Fellowship</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
@@ -16,22 +16,36 @@
             
         </div>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Ministries</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="./index.html" class="active_nav">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Ministries</a>
+                <div class="dropdown-content">
+                    <a href="./children`s_church.html">Children`s Church</a>
+                    <a href="./ladies.html">Ladies` Fellowship</a>
+                    <a href="./men.html">Men`s Fellowship</a>
+                    <a href="./youth.html">Youth Ministry</a>
+                </div>
+            </li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="offScreenMenu">
         <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             &nbsp;
-            <li><a href="">About</a></li>
+            <li><a href="./about.html">About</a></li>
             &nbsp;
-            <li><a href="">Ministries</a></li>
+            <li><a href="#">Ministries</a></li>
             &nbsp;
-            <li><a href="">Contact</a></li>
+            <ol class="menu_down">
+                <li><a href="./children`s_church.html">Children`s Church</a></li>
+                <li><a href="./ladies.html">Ladies` Fellowship</a></li>
+                <li><a href="./men.html">Men`s Fellowship</a></li>
+                <li><a href="./youth.html">Youth Ministry</a></li>
+            </ol>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </div>
 
@@ -51,10 +65,8 @@
                         <h2>Glad Tidings Fellowship <br>Southlands</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis error, 
                         sit possimus ex fugiat voluptate dignissimos quis laboriosam tenetur ratione repellendus 
-                        magnam unde vitae doloribus dolore! Dicta, voluptatum quasi. Lorem ipsum dolor sit amet 
-                        consectetur adipisicing elit. Cupiditate rerum ipsum, libero facilis illo vero consectetur 
-                        officia necessitatibus assumenda, tempore et in, soluta corporis fugiat error eius 
-                        quibusdam. Nihil, beatae!</p>
+                        magnam unde vitae doloribus dolore! </p>
+                        <a href="./about.html"><button class="home_learn_more">Learn More</button></a>
                     </div>
                     <div>
 
@@ -67,43 +79,16 @@
 
     <!-- About Glad Tidings -->
     <section id="about_glad_tidings">
-        <div class="about_GT_southlands">
-            <div class="GT_southlands_head">
-                <h2>About Glad Tidings Fellowship <br>Southlands Assembly</h2>
-            </div>
-            <div class="GT_southlands_content">
-                <div class="GT_image">
-
-                </div>
-                <div class="GT_content">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam error facere ipsam doloremque 
-                        ex dolores? Illo tempora beatae iste suscipit accusantium similique recusandae dolores vel 
-                        sapiente aliquid quasi, nobis quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Esse possimus doloribus tenetur officia, vitae molestias tempora praesentium deleniti sed quia 
-                        maiores nihil ad neque dignissimos dolorem, ipsam, saepe harum minima! Lorem ipsum dolor sit 
-                        amet consectetur adipisicing elit. Modi molestias veritatis cupiditate ratione praesentium 
-                        repellat id deserunt ducimus necessitatibus in iste maiores, perferendis adipisci sed velit 
-                        nostrum animi exercitationem natus!</p>
-                </div>
-            </div>
-        </div>
-        <div class="gt_head">
-            <h2>About Glad Tidings Fellowship</h2>
+        
+        <div class="gt_head_home_div">
+            <h2 class="gt_head_home">A Brief History</h2>
         </div>
         <p>The vision of Glad Tidings was given to Pastor Richmond Chiundiza who at that time was a 
             Pastor with Christian Life Center Harare where he was working with Pastor Steve Bacon. He was 
             also National Director of Campus Crusade for Christ in Zimbabwe. In 1982 Pastor Chiundiza put this 
-            vision into action and started Glad Tidings Fellowship meeting at Highfield Secondary School in 
-            Harare. A few handful people met in the School Hall on Sunday afternoons from August 1982. The work 
-            grew very rapidly through evangelism (witnessing and discipleship) in the township under Richmond 
-            Chiundiza’s pastoral care and preaching. A few local churches were planted including, Warren Park, 
-            Dzivaresekwa, Glendale and Kadoma. Then in 1986 a Harare wide outreach plan dubbed “Action 86” was 
-            launched and several local churches were planted and outreaches were done all over Harare and 
-            spilled over to other Cities and towns. By end of 1990 churches had been planted in Harare, Bulawayo, 
-            Gweru, Mutare, Masvingo. Today the church has many local churches including Harare, Bulawayo, Gweru, 
-            Mutare, and every town in Zimbabwe. There are also many local churches in the Rural areas all over 
-            Zimbabwe. Outside Zimbabwe Glad Tidings is in South Africa with 6 congregations, the United Kingdom a
-            nd Botswana, Malawi and Zambia.</p>
+            vision into action and started Glad Tidings Fellowship meeting at Highfield Secondary School in Harare.
+            </p>
+            <button class="learn_more">Learn More</button>
         
         <div class="DIA">
             <h2>Discples In Action(DIA)</h2>
@@ -113,11 +98,8 @@
                 <p>Disciples in Action is a team of Apostles that was used by the Lord Jesus Christ to found the Glad Tidings 
                     Fellowship (GTF) denomination. This Apostolic board was responsible for the planting and strengthening 
                     majority of assemblies Glad Tidings Fellowship has. This apostolic team is led by Apostle Richmond Chiundiza,
-                     the one used by the Lord Jesus Christ in starting Glad Tidings Fellowship denomination. He is currently the
-                      Leader of Disciples in Action and Pastor of Glad Tidings Fellowship City Church. <br> <br>
-                       The DIA team members are; Pastor A. T. Gore (GTF Highglen church – Gomo rekutizira), Pastor A. D. Simba 
-                       (GTF Mufakose church – Goshen) and Pastor Kaseke (GTF Dzivaresekwa church). These men of God, with their 
-                       apostolic calling, have planted churches all over Zimbabwe.</p>
+                     the one used by the Lord Jesus Christ in starting Glad Tidings Fellowship denomination.</p>
+                     <a href="./about.html"><button class="learn_more">Learn More</button></a>
             </div>
             <div class="DIA_img">
 
@@ -161,50 +143,50 @@
         </div>
         <main>
             <ul class='slider'>
-              <li class='item' style="background-image: url('./assets/ladies2.jpg')">
-                <div class="overlay_slider">
-                    <div class='content'>
-                      <h2 class='title'>"The Men`s Fellowship"</h2>
-                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                      praesentium nisi. Id laboriosam ipsam enim.  </p>
-                      <button>Read More</button>
+                <li class='item' style="background-image: url('./assets/images/children`s_church.png')">
+                    <div class="overlay_slider">
+                        <div class='content'>
+                          <h2 class='title'>"The Vibrant Children`s Church"</h2>
+                          <p class='description'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                          </p>
+                          <a href=""><button>Read More</button></a>
+                        </div>
                     </div>
-                </div>
-              </li>
-              <li class='item' style="background-image: url('./assets/images/1.jpg')">
-                <div class="overlay_slider">
-                    <div class='content'>
-                      <h2 class='title'>"The Ladies` Fellowship"</h2>
-                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                      praesentium nisi. Id laboriosam ipsam enim.  </p>
-                      <button>Read More</button>
+                </li>
+                <li class='item' style="background-image: url('./assets/images/ladies-12.jpg')">
+                      <div class="overlay_slider">
+                          <div class='content'>
+                          <h2 class='title'>"The Ladies` Fellowship"</h2>
+                          <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                          adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                          praesentium nisi. Id laboriosam ipsam enim.  </p>
+                          <a href=""><button>Read More</button></a>
+                          </div>
+                      </div>
+                </li>
+                <li class='item' style="background-image: url('./assets/images/men.jpg')">
+                    <div class="overlay_slider">
+                        <div class='content'>
+                        <h2 class='title'>"The Men`s Fellowship"</h2>
+                        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                        praesentium nisi. Id laboriosam ipsam enim.  </p>
+                        <a href=""><button>Read More</button></a>
+                        </div>
                     </div>
-                </div>
-              </li>
-              <li class='item' style="background-image: url('./assets/images/2.jpg')">
-                <div class="overlay_slider">
-                    <div class='content'>
-                      <h2 class='title'>"The Youth"</h2>
-                      <p class='description'> Lorem ipsum, dolor sit amet consectetur
-                      adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                      praesentium nisi. Id laboriosam ipsam enim.  </p>
-                      <button>Read More</button>
+                </li>
+                <li class='item' style="background-image: url('./assets/images/youths.jpg')">
+                    <div class="overlay_slider">
+                        <div class='content'>
+                        <h2 class='title'>"The Youth Ministry"</h2>
+                        <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                        praesentium nisi. Id laboriosam ipsam enim.  </p>
+                        <a href=""><button>Read More</button></a>
+                        </div>
                     </div>
-                </div>
-              </li>
-              <li class='item' style="background-image: url('./assets/images/3.jpg')">
-                <div class="overlay_slider">
-                    <div class='content'>
-                      <h2 class='title'>"The Vibrant Children`s Church"</h2>
-                      <p class='description'>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
-                      </p>
-                      <button>Read More</button>
-                    </div>
-                </div>
-              </li>
+                </li>
             </ul>
             <nav class='nav'>
               <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
