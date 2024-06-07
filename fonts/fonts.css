@@ -1,0 +1,52 @@
+@font-face{
+    font-family: 'gotham italic';
+    font-style: normal;
+    font-weight: 100;
+    src:url("Gotham/GothamBookItalic.ttf")
+}
+@font-face {
+    font-family:'gotham medium';
+    font-style: normal;
+    font-weight: 100;
+    src:url("Gotham/GothamMedium.ttf")
+}
+@font-face{
+    font-family:'poppins semibold';
+    font-style: normal;
+    font-weight: 100;
+    src:url("Poppins-SemiBold.ttf")
+}
+@font-face{
+    font-family:'poppins regular';
+    font-style: normal;
+    font-weight: 100;
+    src:url("Poppins-Regular.ttf")
+}
+
+@font-face{
+    font-family:'gotham regular';
+    font-style: normal;
+    font-weight: 100;
+    src:url("Gotham/GothamLight.ttf")
+}
+@font-face{
+    font-family:'gotham regulars';
+    font-style: normal;
+    font-weight: 1;
+    color: rgba(14, 14, 14, 0.726);
+    src:url("Gotham/GothamLight.ttf")
+}
+
+@font-face{
+    font-family:'poppins light';
+    font-style: normal;
+    font-weight: 700;
+    src:url("Poppins-Light.ttf")
+}
+
+@font-face{
+    font-family:'poppins medium';
+    font-style: normal;
+    font-weight: 700;
+    src:url("Poppins-Medium.ttf")
+}

@@ -4,11 +4,23 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: "Poppins", sans-serif;
+    font-family:'poppins regular';
     scroll-behavior: smooth;
 }
 
 /* Main Navigation Bar */
+header{
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    transition: all 1s;
+}
+
+header.sticky{
+    background-color: #16166b;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.459);
+}
 
 .main_logo{
     position: absolute;
@@ -38,7 +50,8 @@
 .main_nav{
     ul{
         li{
-            a{color: white;
+            a{
+                color: #848486;
                 font-size: 15px;
                 transition: 0.5s ease-in-out;
             }
@@ -46,12 +59,70 @@
     }
 }
 
-.main_nav ul li a:hover{
-    color: #9f9fa5;
+.main_nav{
+    ul{
+        li{
+            a:hover{
+                color: white;
+            }
+        }
+    }
 }
 
-.active_nav{
-    color: #9f9fa5;
+.main_nav{
+    ul{
+        li{
+            .active_nav{
+                color: white;
+            }
+        }
+    }
+}
+
+/* DropDown Menu on Nav */
+.dropdown-content{
+    background: #16166b;
+    backdrop-filter: blur(10px);
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    right: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+
+    @media(max-width:1230px){
+        right: 8%;
+    }
+
+    @media(max-width:1125px){
+        right: 6%;
+    }
+
+    @media(max-width:1050px){
+        right: 4%;
+    }
+
+    @media(max-width:750px){
+        min-width: 150px;
+        right: 3%;
+    }
+
+    a{
+        padding: 12px 10px;
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_down{
+    margin-left: 60%;
+    li{
+        padding-top: 10px;
+    }
 }
 
 /* Off Screen Menu */
@@ -88,15 +159,20 @@
 .offScreenMenu{
     li{
         list-style: none;
+        .active_nav{
+            color: white;
+        }
+
         a{
             text-decoration: none;
-            color: white;
+            color: #848486;
+            transition: 0.5s ease-in-out;
         }
     }
 }
 
 .offScreenMenu li a:hover{
-    color: #9f9fa5;
+    color: white;
 }
 
  
@@ -106,6 +182,7 @@
     height: 40px;
     width: 35px;
     margin-left: 90%;
+    margin-top: 5%;
     position: absolute;
     display: none;
 
@@ -124,7 +201,7 @@
 }
 
 .ham_menu span {
-    height: 4px;
+    height: 3.5px;
     width: 85%;
     background-color: white;
     border-radius: 25px;
@@ -133,6 +210,14 @@
     top: 50%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
+}
+
+.ham_menu:hover span:nth-child(1){
+    width: 60%;
+}
+
+.ham_menu:hover span:nth-child(3){
+    width: 60%;
 }
 
 .ham_menu span:nth-child(1) {
@@ -148,17 +233,19 @@
 }
 
 .ham_menu.active span:nth-child(1) {
-    top: 4%;
+    top: 10%;
     width: 30px;
     left: 93%;
     position: fixed;
     transform: translate(-50%, -50%) rotate(45deg);
 
     @media(max-width:520px){
-        left: 90%;
+        top: 8%;
+        left: 88%;
     }
 
     @media(max-width:420px){
+        top: 7%;
         left: 85%;
     }
 }
@@ -168,61 +255,20 @@
 }
 
 .ham_menu.active span:nth-child(3) {
-    top: 4%;
+    top: 10%;
     left: 93%;
     width: 30px;
     position: fixed;
     transform: translate(-50%, -50%) rotate(-45deg);
     
     @media(max-width:520px){
-        left: 90%;
+        top: 8%;
+        left: 88%;
     }
 
     @media(max-width:420px){
+        top: 7%;
         left: 85%;
-    }
-}
-
-/* DropDown Menu on Nav */
-.dropdown-content{
-    display: none;
-    position: absolute;
-    min-width: 200px;
-    right: 10%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-
-    @media(max-width:1230px){
-        right: 8%;
-    }
-
-    @media(max-width:1125px){
-        right: 6%;
-    }
-
-    @media(max-width:1050px){
-        right: 4%;
-    }
-
-    @media(max-width:750px){
-        min-width: 150px;
-        right: 3%;
-    }
-
-    a{
-        padding: 12px 10px;
-    }
-}
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.menu_down{
-    margin-left: 60%;
-    li{
-        padding-top: 10px;
     }
 }
 
@@ -289,6 +335,7 @@
         transition: 1.5s;
         transform-origin: left;
         transform: scaleX(1);
+        font-weight: 500;
 
         @media(max-width:380px){
             font-size: 18px;
@@ -301,7 +348,7 @@
         
 
         @media(max-width:800px){
-            padding-top: 20%;
+            padding-top: 15%;
         }
 
         @media(max-width:380px){
@@ -329,11 +376,104 @@
 }
 
 .gt_head_home{
-    font-family: "Alex Brush";
     font-weight: 100;
     font-size: 35px;
 }
 
+/* Meet Our Pastor */
+#our_pastor{
+    padding: 3% 6% 0 6%;
+    background-color: #16166b;
+
+    @media(max-width:550px){
+        padding: 3% 6% 5% 6%;
+    }
+
+    @media(max-width:350px){
+        padding: 3% 6% 8% 6%;
+    }
+}
+
+.our_pastor_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    padding: 2% 0 8% 0;
+
+    @media(max-width:550px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.pastor{
+
+}
+
+.hello{
+    h2{
+        font-weight: 500;
+        font-size: 40px;
+        color: white;
+
+        @media(max-width:550px){
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+}
+
+.card{
+    width: 250px;
+    height: 400px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 6% 6%;
+
+    @media(max-width:680px){
+        width: 200px;
+        height: 350px;
+    }
+
+    @media(max-width:550px){
+        width: 200px;
+        height: 300px;
+    }
+}
+
+.card_head{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    h4{
+        color: #16166b;
+    }
+}
+
+.potrait{
+    border-radius: 25px;
+    width: 100%;
+    height: 300px;
+    background-image: url(../assets/images/Pastor_Mucheka.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @media(max-width:680px){
+        height: 250px;
+    }
+
+    @media(max-width:550px){
+        height: 200px;
+    }
+}
+
+.card_body{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    h4{
+        color: #16166b;
+    }
+}
 
 /* About Section */
 #about_hero_section{
@@ -397,6 +537,7 @@
         transition: 1.5s;
         transform-origin: left;
         transform: scaleX(1);
+        font-weight: 500;
 
         @media(max-width:380px){
             font-size: 18px;
@@ -419,15 +560,13 @@
 }
 
 .history{
-    font-family: "Alex Brush";
-    font-weight: 100;
+    font-weight: 500;
     font-size: 35px;
 }
 
 .mission{
     color: white;
-    font-family: "Alex Brush";
-    font-weight: 100;
+    font-weight: 500;
     font-size: 35px;
     padding-top: 5%;
 
@@ -477,6 +616,7 @@
     padding: 2% 0 2% 0;
 
     h2{
+        font-weight: 500;
 
         @media(max-width:400px){
             font-size: 20px;
@@ -495,6 +635,10 @@
 
 .DIA_par p{
     margin-right: 2%;
+
+    @media(max-width:720px){
+        margin-right: 0;
+    }
 }
 
 .DIA_img{
@@ -519,6 +663,7 @@
     padding-bottom: 3%;
 
     h2{
+        font-weight: 500;
         @media(max-width:400px){
             font-size: 20px;
         }
@@ -562,6 +707,7 @@
     padding: 0 0 3% 6%;
 
     h2{
+        font-weight: 500;
         @media(max-width:400px){
             font-size: 20px;
         }
@@ -636,6 +782,8 @@
     padding: 3% 0 3% 6%;
 
     h2{
+        font-weight: 500;
+
         @media(max-width:400px){
             font-size: 20px;
         }
@@ -819,3 +967,11 @@ main {
     }
   }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #16166b;
+    color: white;
+    height: 80px;
+}
